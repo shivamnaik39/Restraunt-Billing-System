@@ -1,0 +1,58 @@
+body {
+    background: rgb(218, 255, 118);
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px
+}
+
+
+.title {
+    border: rgb(231, 126, 40) solid 5px;
+    border-radius: 20px;
+    margin: auto;
+    margin-top: 50px;
+    width: 50%;
+    text-align: center;
+    background: rgb(236, 150, 150);
+    color: rgb(94, 18, 194);
+}
+
+.item {
+    margin: 60px;
+    width: 70%;
+    clear: both;
+
+}
+
+.item input {
+    width: 100%;
+    clear: both;
+}
+
+.b1,
+.b2,
+.b3 {
+    border: rgb(52, 121, 61) solid 5px;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.b3 {
+    background: rgb(161, 175, 255);
+}
+
+.b2 {
+    background: rgb(141, 255, 141);
+}
+
+.b1 {
+
+    background: rgb(244, 128, 255);
+}
+
+
+#price {
+
+    font-size: 20px;
+    background: rgb(140, 245, 118);
+}
