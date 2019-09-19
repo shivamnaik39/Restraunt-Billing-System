@@ -22,25 +22,30 @@
         </div>
     </div>
 
-
+    <!-- box-1 -->
     <div class="row">
         <div class="col-sm-4">
             <div class="container item b1">
                 <form action="">
                     <form action="/">
-                        Bill Number: <input type="number" name="quantity">
+                        <label for="biino">Bill Number:</label>
+                        <input type="number" name="billno" id="billno" min="0" value="10001" readonly>
                         <br><br>
 
-                        French Fries: <input type="number" name="quantity">
+                        <label for="ff">French Fries:</label>
+                        <input type="number" name="french_fries" id="ff" min="0" value="0">
                         <br><br>
 
-                        Burger: <input type="number" name="quantity">
+                        <label for="brg">Burger:</label>
+                        <input type="number" name="burger" id="brg" min="0" value="0">
                         <br><br>
 
-                        Pizza: <input type="number" name="quantity">
+                        <label for="pz">Pizza:</label>
+                        <input type="number" name="pizza" id="pz" min="0" value="0">
                         <br><br>
 
-                        Soft Drinks: <input type="number" name="quantity">
+                        <label for="sd">Soft Drinks: </label>
+                        <input type="number" name="soft_drinks" id="sd" min="0" value="0">
                         <br><br>
 
                     </form>
@@ -49,21 +54,27 @@
 
 
         </div>
+
+        <!-- box-2 -->
         <div class="col-sm-4">
             <div class="container item b2">
                 <form action="">
-                    <form action="/">
-                        Price: <input type="number" name="quantity">
+                    <form action="">
+                        <label for="price">Price(&#8377;):</label>
+                        <input type="number" name="price" id="price" min="0" readonly>
                         <br><br>
 
-                        VAT: <input type="number" name="quantity">
+                        <label for="vat">VAT(%): </label>
+                        <input type="number" name="vat" id="vat" min="0" value="11">
                         <br><br>
 
-                        Total Price: <input type="number" name="quantity">
+                        <label for="Tprice">Total Price(&#8377;): </label>
+                        <input type="number" name="total_price" id="Tprice" min="0" readonly>
                         <br><br>
 
-                        <button type="submit" class="btn-primary">Calculate</button>
-                        <button type="submit" class="btn-danger">Reset</button>
+                        <button type="button" class="btn-primary" id="calculateb">Calculate</button>
+                        <button type="button" class="btn-danger" id="resetb">Reset</button>
+                        <br>
 
 
 
@@ -72,23 +83,29 @@
             </div>
 
         </div>
+
+        <!-- box-3 -->
         <div class="col-sm-4">
             <div class="container item b3">
                 <form action="">
                     <form action="/">
-                        <span id="price">Price Per Serving</span> 
+                        <span id="price_ps">Price Per Serving</span>
                         <br><br>
 
-                        French Fries: <input type="number" name="quantity">
+                        <label for="ffp">French Fries: </label>
+                        <input type="number" name="ffp" id="ffp" min="0" value="99">
                         <br><br>
 
-                        Burger: <input type="number" name="quantity">
+                        <label for="brgp">Burger: </label>
+                        <input type="number" name="brgp" id="brgp" min="0" value="199">
                         <br><br>
 
-                        Pizza: <input type="number" name="quantity">
+                        <label for="pzp">Pizza: </label>
+                        <input type="number" name="pzp" id="pzp" min="0" value="399">
                         <br><br>
 
-                        Soft Drinks: <input type="number" name="quantity">
+                        <label for="sdp">Soft Drinks: </label>
+                        <input type="number" name="sdp" id="sdp" min="0" value="30">
                         <br><br>
 
                     </form>
@@ -122,6 +139,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
+
+    <script src="script.js"></script>
 </body>
 
 </html>

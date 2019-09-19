@@ -43,16 +43,30 @@ body {
 
 .b2 {
     background: rgb(141, 255, 141);
+    font-weight: bold;
 }
+
+.b2 input {
+    font-weight: bold;
+    color: blue;
+}
+
+
 
 .b1 {
 
     background: rgb(244, 128, 255);
+    font-weight: bold;
 }
 
 
-#price {
+#price_ps {
 
     font-size: 20px;
     background: rgb(140, 245, 118);
+}
+
+#billno {
+    color: red;
+    font-weight: bold;
 }
