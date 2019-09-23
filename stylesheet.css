@@ -1,5 +1,5 @@
 body {
-    background: url("images/bread-bun-burger-2903384.jpg") no-repeat center center fixed;
+    background: url("images/bg-d.jpg") no-repeat fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -69,9 +69,9 @@ button:active {
 
 .b2 input {
     font-weight: bold;
-    color: blhtml {
-    
-    }
+
+    color: blhtml {}
+
     ue;
 }
 
@@ -89,3 +89,9 @@ button:active {
     font-weight: bold;
 }
 
+/* media querys */
+@media only screen and (max-width: 411px) {
+    body {
+        background: url("images/bg-p.jpg");
+    }
+}
