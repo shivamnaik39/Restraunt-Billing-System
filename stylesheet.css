@@ -1,6 +1,8 @@
 body {
     background: url("images/bread-bun-burger-2903384.jpg");
     background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
     background-size: cover;
     background-attachment: fixed;
     font-weight: bold;
