@@ -1,11 +1,8 @@
 // variables
 
 // box-1
-var billno = document.querySelector("#billno");
-var ff = document.querySelector("#ff");
-var brg = document.querySelector("#brg");
-var pz = document.querySelector("#pz");
-var sd = document.querySelector("#sd");
+billno = document.querySelector("#billno");
+var menu = document.querySelectorAll("#items .menu");
 
 // box-2
 var price = document.querySelector("#price");
@@ -14,14 +11,8 @@ var Tprice = document.querySelector("#Tprice");
 var resetb = document.querySelector("#resetb");
 var calculateb = document.querySelector("#calculateb");
 
-
-
 // box-3
-var ffp = document.querySelector("#ffp");
-var brgp = document.querySelector("#brgp");
-var pzp = document.querySelector("#pzp");
-var sdp = document.querySelector("#sdp");
-
+var rates = document.querySelectorAll("#pricing .rates");
 
 // Functions
 
@@ -32,11 +23,11 @@ function reset() {
 
     billno.value = bn.toString(10);
 
-    ff.value = brg.value = pz.value = sd.value = "0";
+    for (var i = 0; i < menu.length; i++)
+        menu[i].value = "0";
+
+
     price.value = Tprice.value = "";
-
-
-
 
 
 }
@@ -45,16 +36,16 @@ function reset() {
 function billing() {
 
     var sum = 0;
-    var serving = [ff.value, brg.value, pz.value, sd.value];
-    var pricing = [ffp.value, brgp.value, pzp.value, sdp.value];
 
-    for (var i = 0; i < serving.length; i++)
-        sum = sum + parseInt(serving[i], 10) * parseInt(pricing[i], 10);
+    for (var i = 0; i < menu.length; i++)
+        sum += menu[i].value * rates[i].value;
+
 
     return sum;
 }
 
 function calculate() {
+
 
     var p = billing(),
         v = parseInt(vat.value, 10);

@@ -1,20 +1,45 @@
 body {
-    background: rgb(218, 255, 118);
+    background: url("images/bread-bun-burger-2903384.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px
+    font-size: 17px;
+    color: #040F3D;
+}
+
+input {
+    border-color: #040F3D;
+    border-radius: 8px;
+    padding: 3px;
+}
+
+input:focus {
+    border-width: 3px;
+
+}
+
+button {
+    border-radius: 5px;
+    margin: 5px;
+}
+
+button:active {
+    font-weight: bold;
+    font-size: 18px;
 }
 
 
 .title {
-    border: rgb(231, 126, 40) solid 5px;
+    border: #040F3D solid 3px;
     border-radius: 20px;
     margin: auto;
     margin-top: 50px;
     width: 50%;
     text-align: center;
-    background: rgb(236, 150, 150);
-    color: rgb(94, 18, 194);
+    background: #4BFFA5;
+    opacity: 0.70;
+    color: #040F3D;
 }
 
 .item {
@@ -32,18 +57,11 @@ body {
 .b1,
 .b2,
 .b3 {
-    border: rgb(52, 121, 61) solid 5px;
+    border: #040F3D solid 3px;
     border-radius: 10px;
     padding: 15px;
-}
-
-.b3 {
-    background: rgb(161, 175, 255);
-}
-
-.b2 {
-    background: rgb(141, 255, 141);
-    font-weight: bold;
+    opacity: 0.70;
+    background: #4BFFA5;
 }
 
 .b2 input {
@@ -51,19 +69,13 @@ body {
     color: blue;
 }
 
-
-
-.b1 {
-
-    background: rgb(244, 128, 255);
-    font-weight: bold;
-}
-
-
 #price_ps {
 
-    font-size: 20px;
-    background: rgb(140, 245, 118);
+    font-size: 22px;
+    background: #4BFFA5;
+    border: 0px;
+    font-weight: bold;
+    text-decoration: underline;
 }
 
 #billno {
