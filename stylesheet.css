@@ -1,10 +1,10 @@
 body {
-    background: url("images/bread-bun-burger-2903384.jpg");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
+    background: url("images/bread-bun-burger-2903384.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
-    background-attachment: fixed;
+    height: 100%;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 17px;
@@ -69,7 +69,10 @@ button:active {
 
 .b2 input {
     font-weight: bold;
-    color: blue;
+    color: blhtml {
+    
+    }
+    ue;
 }
 
 #price_ps {
@@ -85,3 +88,4 @@ button:active {
     color: red;
     font-weight: bold;
 }
+
