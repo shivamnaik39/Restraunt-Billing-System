@@ -93,3 +93,28 @@ button:active {
         background: url("images/bg-p.jpg");
     }
 }
+
+
+
+
+/* Page CSS */
+
+
+#page2 {
+
+    display: none;
+
+
+}
+
+
+/* Warning1 */
+#warning1 {
+    font-weight: bold;
+    color: red;
+    padding: 2px;
+    font-size: 20px;
+    margin: 5px;
+    display: none;
+
+}
