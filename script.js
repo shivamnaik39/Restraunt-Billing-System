@@ -2,7 +2,7 @@
 
 // box-1
 var billno = document.querySelector("#billno");
-billno.value = JSON.parse(localStorage.getItem("billNo"));
+// billno.value = JSON.parse(localStorage.getItem("billNo"));
 
 
 var menu = document.querySelectorAll("#items .menu");
@@ -62,7 +62,7 @@ function reset() {
         bn++;
 
     billno.value = bn.toString(10);
-    localStorage.setItem("billNo",billno.value);
+    // localStorage.setItem("billNo",billno.value);
 
     for (var i = 0; i < menu.length; i++) {
         menu[i].value = "0";
