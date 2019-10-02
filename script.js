@@ -14,6 +14,18 @@ var calculateb = document.querySelector("#calculateb");
 // box-3
 var rates = document.querySelectorAll("#pricing .rates");
 
+
+// Nav-buttons
+var HOMEb = document.querySelector("#HOME");
+var PRICINGb = document.querySelector("#PRICING");
+
+// Page
+var page1 = document.querySelector("#page1");
+var page2 = document.querySelector("#page2");
+
+
+
+
 // Functions
 
 function reset() {
@@ -60,9 +72,27 @@ function calculate() {
 
 }
 
+function homef() {
+    page2.style.display = "none";
+    page1.style.display = "block";
+}
+
+
+
+function pricingf() {
+    page1.style.display = "none";
+    page2.style.display = "block";
+
+}
+
+
 
 
 // Procedure
 
 resetb.addEventListener("click", reset);
 calculateb.addEventListener("click", calculate);
+
+HOMEb.addEventListener("click", homef);
+
+PRICINGb.addEventListener("click", pricingf);

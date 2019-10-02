@@ -17,6 +17,24 @@
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#" id="HOME"><i class="fas fa-coffee"></i> HOME</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item ">
+                    <a class="nav-link" href="#" id="PRICING">Pricing <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link2</a>
+                </li>
+
+
+    </nav>
 
     <div class="container">
         <div class="title">
@@ -24,102 +42,162 @@
         </div>
     </div>
 
-    <!-- box-1 -->
-    <div class="row">
-        <div class="col-sm-4">
-            <div class="container item b1">
-                <form action="">
-                    <form action="" id="cDetails">
-                        <label for="biino">Bill Number:</label>
-                        <input type="number" name="billno" id="billno" min="0" value="10001" readonly>
-                        <br><br>
-
-                    </form>
-                    <form action="" id="items">
-                        <label for="ff">French Fries:</label>
-                        <input type="number" name="french_fries" id="ff" min="0" value="0" class="menu">
-                        <br><br>
-
-                        <label for="brg">Burger:</label>
-                        <input type="number" name="burger" id="brg" min="0" value="0" class="menu">
-                        <br><br>
-
-                        <label for="pz">Pizza:</label>
-                        <input type="number" name="pizza" id="pz" min="0" value="0" class="menu">
-                        <br><br>
-
-                        <label for="sd">Soft Drinks: </label>
-                        <input type="number" name="soft_drinks" id="sd" min="0" value="0" class="menu">
-                        <br><br>
-
-                    </form>
-                </form>
-            </div>
-
-
-        </div>
-
-        <!-- box-2 -->
-        <div class="col-sm-4">
-            <div class="container item b2">
-                <form action="">
-                    <form action="" id="priceDisplay">
-                        <label for="price">Price(&#8377;):</label>
-                        <input type="number" name="price" id="price" min="0" readonly>
-                        <br><br>
-
-                        <label for="vat">VAT(%): </label>
-                        <input type="number" name="vat" id="vat" min="0" value="11">
-                        <br><br>
-
-                        <label for="Tprice">Total Price(&#8377;): </label>
-                        <input type="number" name="total_price" id="Tprice" min="0" readonly>
-                        <br><br>
-
-                        <button type="button" class="btn-primary" id="calculateb">Calculate</button>
-                        <button type="button" class="btn-danger" id="resetb">Reset</button>
-                        <br>
-
-
-
-                    </form>
-                </form>
-            </div>
-
-        </div>
-
-        <!-- box-3 -->
-        <div class="col-sm-4">
-            <div class="container item b3">
-                <form action="">
+    <!-- Page-1 -->
+    <div id="page1">
+        <!-- box-1 -->
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="container item b1">
                     <form action="">
-                        <input type="text" id="price_ps" value="Price Per Serving" readonly>
-                        <br><br>
+                        <form action="" id="cDetails">
+                            <label for="biino">Bill Number:</label>
+                            <input type="number" name="billno" id="billno" min="0" value="10001" readonly>
+                            <br><br>
+
+                        </form>
+                        <form action="" id="items">
+                            <label for="ff">French Fries:</label>
+                            <input type="number" name="french_fries" id="ff" min="0" value="0" class="menu">
+                            <br><br>
+
+                            <label for="brg">Burger:</label>
+                            <input type="number" name="burger" id="brg" min="0" value="0" class="menu">
+                            <br><br>
+
+                            <label for="pz">Pizza:</label>
+                            <input type="number" name="pizza" id="pz" min="0" value="0" class="menu">
+                            <br><br>
+
+                            <label for="sd">Soft Drinks: </label>
+                            <input type="number" name="soft_drinks" id="sd" min="0" value="0" class="menu">
+                            <br><br>
+
+                        </form>
                     </form>
-                    <form action="" id="pricing">
-                        <label for="ffp">French Fries: </label>
-                        <input type="number" name="ffp" id="ffp" min="0" value="99" class="rates">
-                        <br><br>
+                </div>
 
-                        <label for="brgp">Burger: </label>
-                        <input type="number" name="brgp" id="brgp" min="0" value="199" class="rates">
-                        <br><br>
 
-                        <label for="pzp">Pizza: </label>
-                        <input type="number" name="pzp" id="pzp" min="0" value="399" class="rates">
-                        <br><br>
-
-                        <label for="sdp">Soft Drinks: </label>
-                        <input type="number" name="sdp" id="sdp" min="0" value="30" class="rates">
-                        <br><br>
-
-                    </form>
-                </form>
             </div>
 
+            <!-- box-2 -->
+            <div class="col-sm-4">
+                <div class="container item b2">
+                    <form action="">
+                        <form action="" id="priceDisplay">
+                            <label for="price">Price(&#8377;):</label>
+                            <input type="number" name="price" id="price" min="0" readonly>
+                            <br><br>
 
+                            <label for="vat">VAT(%): </label>
+                            <input type="number" name="vat" id="vat" min="0" value="11">
+                            <br><br>
+
+                            <label for="Tprice">Total Price(&#8377;): </label>
+                            <input type="number" name="total_price" id="Tprice" min="0" readonly>
+                            <br><br>
+
+                            <button type="button" class="btn-primary" id="calculateb">Calculate</button>
+                            <button type="button" class="btn-danger" id="resetb">Reset</button>
+                            <br>
+
+
+
+                        </form>
+                    </form>
+                </div>
+
+            </div>
+
+            <!-- box-3 -->
+            <div class="col-sm-4">
+
+
+
+            </div>
         </div>
     </div>
+    <!-- End Of Page-1 -->
+
+    <!-- Page-2 -->
+    <div id="page2">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="container item b1">
+                    <form action="">
+                        <form action="">
+                            <input type="text" id="price_ps" value="Price Per Serving" readonly>
+                            <br><br>
+                        </form>
+                        <form action="" id="pricing">
+                            <label for="ffp">French Fries: </label>
+                            <input type="number" name="ffp" id="ffp" min="0" value="99" class="rates">
+                            <br><br>
+
+                            <label for="brgp">Burger: </label>
+                            <input type="number" name="brgp" id="brgp" min="0" value="199" class="rates">
+                            <br><br>
+
+                            <label for="pzp">Pizza: </label>
+                            <input type="number" name="pzp" id="pzp" min="0" value="399" class="rates">
+                            <br><br>
+
+                            <label for="sdp">Soft Drinks: </label>
+                            <input type="number" name="sdp" id="sdp" min="0" value="30" class="rates">
+                            <br><br>
+
+                        </form>
+                    </form>
+
+
+                </div>
+
+
+            </div>
+
+            <!-- box-2 -->
+            <div class="col-sm-4">
+                <div class="container item b1">
+                    <form action="">
+                        <form action="">
+                            <input type="text" id="price_ps" value="Stock" readonly>
+                            <br><br>
+                        </form>
+                        <form action="" id="stock">
+                            <label for="ffs">French Fries: </label>
+                            <input type="number" name="ffs" id="ffs" min="50" value="99" class="stocks">
+                            <br><br>
+
+                            <label for="brgs">Burger: </label>
+                            <input type="number" name="brgs" id="brgs" min="50" value="199" class="stocks">
+                            <br><br>
+
+                            <label for="pzs">Pizza: </label>
+                            <input type="number" name="pzs" id="pzs" min="30" value="399" class="stocks">
+                            <br><br>
+
+                            <label for="sds">Soft Drinks: </label>
+                            <input type="number" name="sds" id="sds" min="70" value="30" class="stocks">
+                            <br><br>
+
+                        </form>
+                    </form>
+
+
+                </div>
+
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+    </div>
+
+    </div>
+    <!-- End of Page-2 -->
 
 
 

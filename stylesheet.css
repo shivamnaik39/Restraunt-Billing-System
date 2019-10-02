@@ -70,9 +70,7 @@ button:active {
 .b2 input {
     font-weight: bold;
 
-    color: blhtml {}
 
-    ue;
 }
 
 #price_ps {
@@ -94,4 +92,17 @@ button:active {
     body {
         background: url("images/bg-p.jpg");
     }
+}
+
+
+
+
+/* Page CSS */
+
+
+#page2 {
+
+    display: none;
+
+
 }
