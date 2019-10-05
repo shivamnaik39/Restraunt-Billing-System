@@ -1,3 +1,9 @@
+:root {
+    --dark-primary-color: #040F3D;
+    --light-primary-color: #4BFFA5;
+}
+
+
 body {
     background: url("images/bg-d.jpg") no-repeat fixed;
     -webkit-background-size: cover;
@@ -8,11 +14,11 @@ body {
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 17px;
-    color: #040F3D;
+    color: var(--dark-primary-color);
 }
 
 input {
-    border-color: #040F3D;
+    border-color: var(--dark-primary-color);
     border-radius: 8px;
     padding: 3px;
 }
@@ -34,15 +40,15 @@ button:active {
 
 
 .title {
-    border: #040F3D solid 3px;
+    border: var(--dark-primary-color) solid 3px;
     border-radius: 20px;
     margin: auto;
     margin-top: 50px;
     width: 50%;
     text-align: center;
-    background: #4BFFA5;
+    background: var(--light-primary-color);
     opacity: 0.70;
-    color: #040F3D;
+    color: var(--dark-primary-color);
 }
 
 .item {
@@ -60,11 +66,11 @@ button:active {
 .b1,
 .b2,
 .b3 {
-    border: #040F3D solid 3px;
+    border: var(--dark-primary-color) solid 3px;
     border-radius: 10px;
     padding: 15px;
     opacity: 0.70;
-    background: #4BFFA5;
+    background: var(--light-primary-color);
 }
 
 .b2 input {
@@ -76,7 +82,7 @@ button:active {
 #price_ps {
 
     font-size: 22px;
-    background: #4BFFA5;
+    background: var(--light-primary-color);
     border: 0px;
     font-weight: bold;
     text-decoration: underline;
