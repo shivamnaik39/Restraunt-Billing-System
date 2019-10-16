@@ -17,6 +17,10 @@ body {
     color: var(--dark-primary-color);
 }
 
+.mainNav {
+    background-color: black;
+}
+
 input {
     border-color: var(--dark-primary-color);
     border-radius: 8px;

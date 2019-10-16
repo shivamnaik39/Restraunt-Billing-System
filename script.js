@@ -63,7 +63,7 @@ function reset() {
     billno.value = bn.toString(10);
 
     for (var i = 0; i < menu.length; i++) {
-        menu[i].value = "0";
+        menu[i].value = "";
         menu[i].style.background = "#ffffff";
     }
 
