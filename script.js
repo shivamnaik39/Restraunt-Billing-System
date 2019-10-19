@@ -39,6 +39,13 @@ var warn1 = document.querySelector("#warning1");
 
 // Functions
 
+function strToint(str) {
+
+    return parseInt(str, 10);
+}
+
+
+
 function isNegative() {
     for (var i = 0; i < menu.length; i++) {
         var im = parseInt(menu[i].value, 10);
@@ -81,12 +88,40 @@ function reset() {
 
 }
 
+function checkStock() {
+
+    for (var i = 0; i < menu.length; i++) {
+
+        var menu1 = strToint(menu[i].value);
+        var stock1 = strToint(stocks[i].value);
+
+        if (menu1 > stock1)
+            return 1;
+
+
+
+    }
+    return 0;
+}
+
+function stockUpdate() {
+
+
+
+
+    for (var i = 0; i < menu.length; i++) {
+        stocks[i].value -= menu[i].value;
+    }
+
+
+}
+
 
 function billing() {
 
     var sum = 0;
 
-    if (isNegative()) {
+    if (isNegative() || checkStock()) {
         return 0;
     }
 
@@ -108,6 +143,7 @@ function calculate() {
     if (p !== 0) {
         price.value = p.toString(10);
         Tprice.value = tp.toString(10);
+        stockUpdate();
     }
 
 
@@ -161,3 +197,18 @@ for (var i = 0; i < ipArray.length; i++) {
 }
 
 
+for(var i=0;i<menu.length;i++){
+    menu[i].addEventListener("change", function(){
+        
+        if(checkStock()){
+            warn1.textContent = "Selected item(s) are Out Of Stock!!";
+            this.style.background = "#ff7070";
+            warn1.style.display = "block";
+        }
+        else {
+            warn1.style.display = "none";
+            this.style.background = "#ffffff";
+        }
+
+    })
+}
