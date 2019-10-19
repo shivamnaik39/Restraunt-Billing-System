@@ -2,10 +2,6 @@
 
 // box-1
 var billno = document.querySelector("#billno");
-<<<<<<< HEAD
-=======
-// billno.value = JSON.parse(localStorage.getItem("billNo"));
->>>>>>> e1868c33440994da1171244819006ab196d6c5ce
 
 
 
@@ -73,10 +69,6 @@ function reset() {
         bn++;
 
     billno.value = bn.toString(10);
-<<<<<<< HEAD
-=======
-    // localStorage.setItem("billNo",billno.value);
->>>>>>> e1868c33440994da1171244819006ab196d6c5ce
 
     for (var i = 0; i < menu.length; i++) {
         menu[i].value = "";
