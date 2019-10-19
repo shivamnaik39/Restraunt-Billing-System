@@ -197,10 +197,10 @@ for (var i = 0; i < ipArray.length; i++) {
 }
 
 
-for(var i=0;i<menu.length;i++){
-    menu[i].addEventListener("change", function(){
-        
-        if(checkStock()){
+for (var i = 0; i < menu.length; i++) {
+    menu[i].addEventListener("change", function () {
+
+        if (checkStock()) {
             warn1.textContent = "Selected item(s) are Out Of Stock!!";
             this.style.background = "#ff7070";
             warn1.style.display = "block";
