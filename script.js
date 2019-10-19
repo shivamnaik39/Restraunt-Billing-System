@@ -4,6 +4,7 @@
 var billno = document.querySelector("#billno");
 
 
+
 var menu = document.querySelectorAll("#items .menu");
 menu = Array.from(menu);
 
