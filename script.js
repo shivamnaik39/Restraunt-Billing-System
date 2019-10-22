@@ -72,7 +72,26 @@ closeB.addEventListener("click", function () {
 })
 
 
+// Dark Mode
+var nightM = document.querySelector("#nightM");
+var isNight = false;
+var mainNav = document.querySelector(".mainNav");
+nightM.addEventListener("click", function () {
 
+    if (isNight) {
+        document.documentElement.style.setProperty('--dark-primary-color', '#040F3D');
+        document.documentElement.style.setProperty('--light-primary-color', '#4BFFA5');
+
+
+    }
+    else {
+        document.documentElement.style.setProperty('--dark-primary-color', '#4BFFA5');
+        document.documentElement.style.setProperty('--light-primary-color', '#040F3D');
+    }
+
+    isNight = !isNight;
+
+})
 
 
 // Functions
