@@ -11,6 +11,7 @@ menu = Array.from(menu);
 // box-2
 var price = document.querySelector("#price");
 var vat = document.querySelector("#vat");
+var discount = document.querySelector("#discount");
 var Tprice = document.querySelector("#Tprice");
 var resetb = document.querySelector("#resetb");
 var calculateb = document.querySelector("#calculateb");
@@ -35,7 +36,63 @@ var page2 = document.querySelector("#page2");
 // warning 1
 var warn1 = document.querySelector("#warning1");
 
+// Payment
+var online = document.querySelector("#online");
+var offline = document.querySelector("#offline");
+var closeB = document.querySelector(".closeB");
+var payment = document.querySelector("#payment");
+var paymentBox = document.querySelector("#paymentBox");
+var onlineB = document.querySelector("#onlineB");
+var cashB = document.querySelector("#cashB");
+var cashRecived = document.querySelector("#cashRecived");
+var cashReturned = document.querySelector("#cashReturned");
 
+
+
+
+onlineB.addEventListener("click", function () {
+    offline.style.display = "none";
+    online.style.display = "block";
+    closeB.style.display = "block";
+})
+
+cashB.addEventListener("click", function () {
+    online.style.display = "none";
+    offline.style.display = "block";
+    closeB.style.display = "block";
+
+})
+
+closeB.addEventListener("click", function () {
+    alert("Payment window will close.")
+    online.style.display = "none";
+    offline.style.display = "none";
+    paymentBox.style.display = "none";
+    stockUpdate();
+    reset();
+})
+
+
+// Dark Mode
+var nightM = document.querySelector("#nightM");
+var isNight = false;
+var mainNav = document.querySelector(".mainNav");
+nightM.addEventListener("click", function () {
+
+    if (isNight) {
+        document.documentElement.style.setProperty('--dark-primary-color', '#040F3D');
+        document.documentElement.style.setProperty('--light-primary-color', '#4BFFA5');
+
+
+    }
+    else {
+        document.documentElement.style.setProperty('--dark-primary-color', '#4BFFA5');
+        document.documentElement.style.setProperty('--light-primary-color', '#040F3D');
+    }
+
+    isNight = !isNight;
+
+})
 
 
 // Functions
@@ -64,6 +121,7 @@ function isNegative() {
 
 
 function reset() {
+    alert("You will loose your entered data.")
     bn = parseInt(billno.value, 10);
     if (price.value !== "")
         bn++;
@@ -86,6 +144,10 @@ function reset() {
         warn1.style.display = "none";
 
     }
+
+    online.style.display = "none";
+    offline.style.display = "none";
+    paymentBox.style.display = "none";
 
 }
 
@@ -137,14 +199,19 @@ function calculate() {
 
 
     var p = billing(),
-        v = parseInt(vat.value, 10);
+        v = parseInt(vat.value, 10), d = strToint(discount.value);
+    p = p * (1 - d / 100);
+    p = p.toFixed(2);
+
     var tp = p * (1 + v / 100);
     tp = tp.toFixed(2);
 
     if (p !== 0) {
         price.value = p.toString(10);
         Tprice.value = tp.toString(10);
-        stockUpdate();
+        paymentBox.style.display = "block";
+        payment.style.display = "block";
+
     }
 
 
@@ -213,3 +280,8 @@ for (var i = 0; i < menu.length; i++) {
 
     })
 }
+
+
+cashRecived.addEventListener("change", function () {
+    cashReturned.value = strToint(cashRecived.value) - strToint(Tprice.value);
+})

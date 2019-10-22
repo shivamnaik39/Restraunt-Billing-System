@@ -1,10 +1,15 @@
 :root {
     --dark-primary-color: #040F3D;
+    /*  #040F3D;    */
     --light-primary-color: #4BFFA5;
+    /*  #4BFFA5;  */
 }
 
 
+
+
 body {
+
     background: url("images/bg-d.jpg") no-repeat fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -73,7 +78,7 @@ button:active {
     border: var(--dark-primary-color) solid 3px;
     border-radius: 10px;
     padding: 15px;
-    opacity: 0.70;
+    opacity: 0.80;
     background: var(--light-primary-color);
 }
 
@@ -96,6 +101,40 @@ button:active {
     color: red;
     font-weight: bold;
 }
+
+
+/* Payment */
+#payment button {
+    font-size: 20px;
+    ;
+}
+
+#payment {
+
+    padding: 9px;
+    display: none;
+
+}
+
+#paymentBox {
+    display: none;
+}
+
+#online {
+    display: none;
+
+}
+
+#offline {
+    padding: 15px;
+    display: none;
+}
+
+.closeB {
+    font-size: 20px;
+    display: none;
+}
+
 
 /* media querys */
 @media only screen and (max-width: 411px) {

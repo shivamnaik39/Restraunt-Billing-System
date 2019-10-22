@@ -31,7 +31,7 @@
                         <a class="nav-link" href="#" id="PRICING">Pricing <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"></a>
+                        <a class="nav-link" href="#" id="nightM">Night Mode</a>
                     </li>
 
 
@@ -86,9 +86,16 @@
                 <div class="container item b2">
                     <form action="">
                         <form action="" id="priceDisplay">
+
+                            <label for="discount">Special Discount(%): </label>
+                            <input type="number" name="discount" id="discount" min="0" value="0">
+                            <br><br>
+
                             <label for="price">Price(&#8377;):</label>
                             <input type="number" name="price" id="price" min="0" readonly>
                             <br><br>
+
+
 
                             <label for="vat">VAT(%): </label>
                             <input type="number" name="vat" id="vat" min="0" value="11">
@@ -108,6 +115,11 @@
                         <div id="warning1">
 
                         </div>
+
+
+
+
+
                     </form>
                 </div>
 
@@ -115,7 +127,34 @@
 
             <!-- box-3 -->
             <div class="col-sm-4">
+                <div class="item b3" id="paymentBox">
+                    <div id="payment">
+                        <h2>Payment Method</h2>
+                        <button class="btn-success" id="onlineB">Online</button>
+                        <button class="btn-warning" id="cashB">Cash</button>
+                    </div>
 
+                    <div id="online">
+                        <img src="images/paytm.webp" alt="Paytm" class="img-fluid">
+                        <br><br>
+
+                    </div>
+
+                    <div id="offline">
+                        <form action="">
+                            <label for="cashRecived">Cash Recived(&#8377;): </label>
+                            <input type="number" id="cashRecived" min="0"><br><br>
+
+                            <label for="cashReturned">Cash to be Returned(&#8377;): </label>
+                            <input type="number" id="cashReturned" readonly><br><br>
+
+                            <br><br>
+
+                        </form>
+                    </div>
+
+                    <button class="btn-danger closeB">Close</button>
+                </div>
 
 
             </div>
