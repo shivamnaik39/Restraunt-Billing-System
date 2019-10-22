@@ -10,6 +10,7 @@ menu = Array.from(menu);
 // box-2
 var price = document.querySelector("#price");
 var vat = document.querySelector("#vat");
+var discount = document.querySelector("#discount");
 var Tprice = document.querySelector("#Tprice");
 var resetb = document.querySelector("#resetb");
 var calculateb = document.querySelector("#calculateb");
@@ -66,6 +67,7 @@ closeB.addEventListener("click", function () {
     online.style.display = "none";
     offline.style.display = "none";
     paymentBox.style.display = "none";
+    stockUpdate();
     reset();
 })
 
@@ -177,14 +179,16 @@ function calculate() {
 
 
     var p = billing(),
-        v = parseInt(vat.value, 10);
+        v = parseInt(vat.value, 10), d = strToint(discount.value);
+    p = p * (1 - d / 100);
+    p = p.toFixed(2);
+
     var tp = p * (1 + v / 100);
     tp = tp.toFixed(2);
 
     if (p !== 0) {
         price.value = p.toString(10);
         Tprice.value = tp.toString(10);
-        stockUpdate();
         paymentBox.style.display = "block";
         payment.style.display = "block";
 
