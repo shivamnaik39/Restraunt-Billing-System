@@ -34,6 +34,42 @@ var page2 = document.querySelector("#page2");
 // warning 1
 var warn1 = document.querySelector("#warning1");
 
+// Payment
+var online = document.querySelector("#online");
+var offline = document.querySelector("#offline");
+var closeB = document.querySelector(".closeB");
+var payment = document.querySelector("#payment");
+var paymentBox = document.querySelector("#paymentBox");
+var onlineB = document.querySelector("#onlineB");
+var cashB = document.querySelector("#cashB");
+var cashRecived = document.querySelector("#cashRecived");
+var cashReturned = document.querySelector("#cashReturned");
+
+
+
+
+onlineB.addEventListener("click", function () {
+    offline.style.display = "none";
+    online.style.display = "block";
+    closeB.style.display = "block";
+})
+
+cashB.addEventListener("click", function () {
+    online.style.display = "none";
+    offline.style.display = "block";
+    closeB.style.display = "block";
+
+})
+
+closeB.addEventListener("click", function () {
+    alert("Payment window will close.")
+    online.style.display = "none";
+    offline.style.display = "none";
+    paymentBox.style.display = "none";
+    reset();
+})
+
+
 
 
 
@@ -63,6 +99,7 @@ function isNegative() {
 
 
 function reset() {
+    alert("You will loose your entered data.")
     bn = parseInt(billno.value, 10);
     if (price.value !== "")
         bn++;
@@ -85,6 +122,10 @@ function reset() {
         warn1.style.display = "none";
 
     }
+
+    online.style.display = "none";
+    offline.style.display = "none";
+    paymentBox.style.display = "none";
 
 }
 
@@ -144,6 +185,9 @@ function calculate() {
         price.value = p.toString(10);
         Tprice.value = tp.toString(10);
         stockUpdate();
+        paymentBox.style.display = "block";
+        payment.style.display = "block";
+
     }
 
 
@@ -212,3 +256,8 @@ for (var i = 0; i < menu.length; i++) {
 
     })
 }
+
+
+cashRecived.addEventListener("change", function () {
+    cashReturned.value = strToint(cashRecived.value) - strToint(Tprice.value);
+})
