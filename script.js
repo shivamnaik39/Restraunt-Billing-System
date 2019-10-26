@@ -77,20 +77,12 @@ closeB.addEventListener("click", function () {
 var nightM = document.querySelector("#nightM");
 var isNight = false;
 var mainNav = document.querySelector(".mainNav");
+
+
 nightM.addEventListener("click", function () {
-
-    if (isNight) {
-        document.documentElement.style.setProperty('--dark-primary-color', '#040F3D');
-        document.documentElement.style.setProperty('--light-primary-color', '#4BFFA5');
-
-
-    }
-    else {
-        document.documentElement.style.setProperty('--dark-primary-color', '#4BFFA5');
-        document.documentElement.style.setProperty('--light-primary-color', '#040F3D');
-    }
-
-    isNight = !isNight;
+    $("body").toggleClass("body_dark");
+    $(".navbar").toggleClass("navbar-dark bg-dark");
+    $("#nightM").toggleClass("active");
 
 })
 
@@ -198,15 +190,16 @@ function billing() {
 function calculate() {
 
 
-    var p = billing(),
-        v = parseInt(vat.value, 10), d = strToint(discount.value);
+    var p = billing();
+    var tmp33 = p;
+    v = parseInt(vat.value, 10), d = strToint(discount.value);
     p = p * (1 - d / 100);
     p = p.toFixed(2);
 
     var tp = p * (1 + v / 100);
     tp = tp.toFixed(2);
 
-    if (p !== 0) {
+    if (tmp33 !== 0) {
         price.value = p.toString(10);
         Tprice.value = tp.toString(10);
         paymentBox.style.display = "block";
@@ -244,7 +237,7 @@ HOMEb.addEventListener("click", homef);
 
 PRICINGb.addEventListener("click", pricingf);
 
-var ipArray = [vat];
+var ipArray = [vat, discount];
 ipArray = ipArray.concat(menu, rates, stocks);
 
 for (var i = 0; i < ipArray.length; i++) {
@@ -269,7 +262,7 @@ for (var i = 0; i < menu.length; i++) {
     menu[i].addEventListener("change", function () {
 
         if (checkStock()) {
-            warn1.textContent = "Selected item(s) are Out Of Stock!!";
+            warn1.textContent = "Entered servings are more than the available stock!\nPlease check the stock.";
             this.style.background = "#ff7070";
             warn1.style.display = "block";
         }
