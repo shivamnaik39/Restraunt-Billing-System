@@ -82,6 +82,7 @@ nightM.addEventListener("click", function () {
     $("body").toggleClass("body_dark");
     $(".navbar").toggleClass("navbar-dark bg-dark");
     $("#nightM").toggleClass("active");
+   
 
 })
 
