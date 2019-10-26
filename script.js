@@ -191,7 +191,7 @@ function calculate() {
 
     var p = billing();
     var tmp33 = p;
-        v = parseInt(vat.value, 10), d = strToint(discount.value);
+    v = parseInt(vat.value, 10), d = strToint(discount.value);
     p = p * (1 - d / 100);
     p = p.toFixed(2);
 
@@ -236,7 +236,7 @@ HOMEb.addEventListener("click", homef);
 
 PRICINGb.addEventListener("click", pricingf);
 
-var ipArray = [vat,discount];
+var ipArray = [vat, discount];
 ipArray = ipArray.concat(menu, rates, stocks);
 
 for (var i = 0; i < ipArray.length; i++) {
