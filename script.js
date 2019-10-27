@@ -38,11 +38,12 @@ var warn1 = document.querySelector("#warning1");
 // Payment
 var online = document.querySelector("#online");
 var offline = document.querySelector("#offline");
-var closeB = document.querySelector(".closeB");
+var payB = document.querySelector(".payB");
 var payment = document.querySelector("#payment");
 var paymentBox = document.querySelector("#paymentBox");
 var onlineB = document.querySelector("#onlineB");
 var cashB = document.querySelector("#cashB");
+var closeB = document.querySelector(".closeB");
 var cashRecived = document.querySelector("#cashRecived");
 var cashReturned = document.querySelector("#cashReturned");
 
@@ -52,24 +53,40 @@ var cashReturned = document.querySelector("#cashReturned");
 onlineB.addEventListener("click", function () {
     offline.style.display = "none";
     online.style.display = "block";
+    payB.style.display = "block";
     closeB.style.display = "block";
 })
 
 cashB.addEventListener("click", function () {
     online.style.display = "none";
     offline.style.display = "block";
+    payB.style.display = "block";
     closeB.style.display = "block";
+
 
 })
 
-closeB.addEventListener("click", function () {
-    alert("Payment window will close.")
+$(".closeB").on('click', function () {
+    alert("Payment Canceled!!");
+    online.style.display = "none";
+    offline.style.display = "none";
+    paymentBox.style.display = "none";
+
+})
+
+payB.addEventListener("click", function () {
+    alert("Payment was done successfully.")
     online.style.display = "none";
     offline.style.display = "none";
     paymentBox.style.display = "none";
     stockUpdate();
+    if (price.value !== "")
+        bn++;
+
+    billno.value = bn.toString(10);
     reset();
 })
+
 
 
 // Dark Mode
@@ -82,7 +99,7 @@ nightM.addEventListener("click", function () {
     $("body").toggleClass("body_dark");
     $(".navbar").toggleClass("navbar-dark bg-dark");
     $("#nightM").toggleClass("active");
-   
+
 
 })
 
@@ -115,10 +132,10 @@ function isNegative() {
 function reset() {
     alert("You will loose your entered data.")
     bn = parseInt(billno.value, 10);
-    if (price.value !== "")
-        bn++;
+    // if (price.value !== "")
+    //     bn++;
 
-    billno.value = bn.toString(10);
+    // billno.value = bn.toString(10);
 
     for (var i = 0; i < menu.length; i++) {
         menu[i].value = "";
