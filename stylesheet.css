@@ -12,6 +12,10 @@ body {
     overflow-x: hidden;
 }
 
+body label {
+    font-size: 1.3rem;
+}
+
 body {
 
     background: url("images/bg-d.jpg") no-repeat fixed;
@@ -26,6 +30,7 @@ body {
     color: var(--dark-primary-color);
 }
 
+/* Dark Mode */
 .body_dark {
 
     background: black;
@@ -37,12 +42,22 @@ body {
     /*  #040F3D;    */
     --light-primary-color: #040F3D;
     /*  #4BFFA5;  */
+}
+
+#HOME {
+    font-size: 1.5rem;
 
 }
 
 .mainNav {
-    background-color: black;
+    font-size: 1.5rem;
 }
+
+.nav-link {
+    margin-left: 20px;
+}
+
+
 
 input {
     border-color: var(--dark-primary-color);
@@ -70,6 +85,8 @@ button:active {
     margin-top: 100px;
 }
 
+
+
 .title {
 
     border: var(--dark-primary-color) solid 3px;
@@ -81,6 +98,7 @@ button:active {
     background: var(--light-primary-color);
     opacity: 0.70;
     color: var(--dark-primary-color);
+
 }
 
 .item {
@@ -154,6 +172,7 @@ button:active {
     display: none;
 }
 
+.payB,
 .closeB {
     font-size: 20px;
     display: none;
