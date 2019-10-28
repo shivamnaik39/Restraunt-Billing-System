@@ -305,7 +305,7 @@ cashRecived.addEventListener("change", function () {
 // validations
 
 $(function () {
-    $(':input[type="number"]').keypress(function (e) {
+    $(':input[type="number"]').on("input",function (e) {
 
         var code = e.keyCode || e.which;
         if (code == 46 || code == 45 || code == 43) {
