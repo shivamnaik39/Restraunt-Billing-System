@@ -72,21 +72,15 @@ $(".closeB").on('click', function () {
     online.style.display = "none";
     offline.style.display = "none";
     paymentBox.style.display = "none";
+    closeB.style.display = "none";
+    payB.style.display = "none";
+    $("#cashRecived,#cashReturned")[0].value = ""
+    $("#cashRecived,#cashReturned")[1].value = ""
+
 
 })
 
-payB.addEventListener("click", function () {
-    alert("Payment was done successfully.")
-    online.style.display = "none";
-    offline.style.display = "none";
-    paymentBox.style.display = "none";
-    stockUpdate();
-    if (price.value !== "")
-        bn++;
 
-    billno.value = bn.toString(10);
-    reset();
-})
 
 
 
@@ -132,7 +126,7 @@ function isNegative() {
 
 function reset() {
     alert("You will loose your entered data.")
-    bn = parseInt(billno.value, 10);
+    // bn = parseInt(billno.value, 10);
     // if (price.value !== "")
     //     bn++;
 
@@ -292,7 +286,63 @@ for (var i = 0; i < menu.length; i++) {
     })
 }
 
+var valid = false;
 
 cashRecived.addEventListener("change", function () {
-    cashReturned.value = strToint(cashRecived.value) - strToint(Tprice.value);
+    var tmp8 = strToint(cashRecived.value) - strToint(Tprice.value);
+    if (tmp8 < 0) {
+        alert("Less Cash Recieved!!");
+        valis = false;
+    }
+
+    else {
+        cashReturned.value = tmp8;
+        valid = true;
+    }
+})
+
+
+// validations
+
+$(function () {
+    $(':input[type="number"]').keypress(function (e) {
+
+        var code = e.keyCode || e.which;
+        if (code == 46 || code == 45 || code == 43) {
+            alert("Only Positive Integers are allowed!!");
+            e.preventDefault();
+        }
+
+
+    });
+});
+
+
+payB.addEventListener("click", function () {
+    boo = $("#online").css("display");
+    boo2 = parseInt(cashRecived) < parseInt(cashReturned);
+    console.log(boo2);
+
+    if (boo === "block" || valid) {
+        alert("Payment was done successfully.")
+        online.style.display = "none";
+        offline.style.display = "none";
+        paymentBox.style.display = "none";
+        closeB.style.display = "none";
+        payB.style.display = "none";
+        stockUpdate();
+        bn = parseInt(billno.value, 10);
+        if (price.value !== "")
+            bn++;
+
+        billno.value = bn.toString(10);
+        reset();
+        $("#cashRecived,#cashReturned")[0].value = ""
+        $("#cashRecived,#cashReturned")[1].value = ""
+    }
+    else {
+        alert("Less Cash Recived!!");
+    }
+
+
 })
