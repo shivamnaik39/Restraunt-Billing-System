@@ -289,7 +289,10 @@ for (var i = 0; i < menu.length; i++) {
 var valid = false;
 
 cashRecived.addEventListener("change", function () {
-    var tmp8 = strToint(cashRecived.value) - strToint(Tprice.value);
+    var tmp8 = parseFloat(cashRecived.value) - Math.ceil(parseFloat(Tprice.value));
+    // console.log(tmp8);
+    tmp8 = Math.ceil(tmp8);
+    // console.log(tmp8);
     if (tmp8 < 0) {
         alert("Less Cash Recieved!!");
         valis = false;
@@ -305,7 +308,7 @@ cashRecived.addEventListener("change", function () {
 // validations
 
 $(function () {
-    $(':input[type="number"]').on("input",function (e) {
+    $(':input[type="number"]').on("input", function (e) {
 
         var code = e.keyCode || e.which;
         if (code == 46 || code == 45 || code == 43) {
